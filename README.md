@@ -1,9 +1,8 @@
-# Neural Network to Predict Success of Funds Recipient
+# Neural Network to Predict Success of Funds Recipients
 
 ## Overview
 
 Not all funds donated to charitable organizations are impactful. While some bring the intended changes, others may be simply money wasted. The objective of this anaysis is to use Neural Network and Deep Learning to predict success of funds recipients based on a number of characteristics including application type, affiliation, use case, organization type, income, etc.
-
 
 ### Resources
 
@@ -17,7 +16,6 @@ The main purposes are:
 - preprocessing the data for the neural network model,
 - compile, train and evaluate the model,
 - optimize the model.
-
 
 ## Results
 
@@ -33,7 +31,6 @@ The main purposes are:
 
 - All categorical variables were encoded for the analysis, data was split into training and testing sets, and features were standardized.
 
-
 ### Compiling, Training, and Evaluating the Model
 
 - The input data has **43** features and **25,724** samples.
@@ -44,12 +41,12 @@ The main purposes are:
 
 - For the compilation, the optimizer chosen was **adam** and the loss function was **binary_crossentropy**.
 
-- The **Accuracy** for training and testing dataset are approximately **74%** and **73%** respectively, which were not able to achieve the target model performance of **75%**. This falls short of satisfyingly predict the outcome of the charity donations.
+- The accuracy for training and testing dataset are approximately **74%** and **73%** respectively, which were not able to achieve the target model performance of **75%**. This falls short of satisfyingly predict the outcome of the charity donations.
 
 - The result was saved and exported to an HDF5 file as **AlphabetSoupCharity.h5**.
 
-![Accuracy]()
 
+![Accuracy](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/Accuracy.png)
 
 ### Optimizing the Model
 
@@ -63,8 +60,8 @@ To increase the performance of the model, a few measures were taken. They are de
 
 - **ReLU** was used as the activation function for both hidden layers. **Sigmoid** was used for the output layer.
 
-![Accuracy1]()
 
+![Accuracy1](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/Accuracy1.png)
 
 - However, this did not really improve the accuracy which stayed at **74%** for training and **73%** for testing dataset.
 
@@ -73,8 +70,8 @@ To increase the performance of the model, a few measures were taken. They are de
 
 - In this attempt, one more hidden layer with additional neurons were added to see if the model performance could be improved. The three hidden layers had **90**, **50** and **30** neurons, respectively. The activation functions was **ReLU** for all the hidden layers **Sigmoid** was used for the output layer. The model was then trained and tested as before.
 
-![Accuracy2]()
 
+![Accuracy2](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/Accuracy2.png)
 
 - Unfortunately, the accuracy for training and testing dataset stayed at approximately **74%** and **72%**, respectively.
 
@@ -85,7 +82,8 @@ To increase the performance of the model, a few measures were taken. They are de
 
 - The **tanh** activation function used in all the hidden layers with **Sigmoid** for the output layer.
 
-![Accuracy3]()
+
+![Accuracy3](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/Accuracy3.png)
 
 - This model returned a **74%** accuracy for training data but only **72%** for test data
 
@@ -94,14 +92,16 @@ To increase the performance of the model, a few measures were taken. They are de
 
 - A Random Forest model with a depth of 6 produces the best performance but no better than **73%** prediction accuracy.
 
-![RandomForestAccuracy]
+
+![RandomForestAccuracy](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/RandomForestAccuracy.png)
 
 
 #### 5. Logistic Regression
 
 - A Logistic Regression with 50 iterations produced a predictive accuracy of **72%**. 
 
-![LogisticRegressionAccuracy]()
+
+![LogisticRegressionAccuracy](https://github.com/Nusratnimme/Neural_Network_Charity_Analysis/blob/main/Images/LogisticRegressionAccuracy.png)
 
 
 ## Summary
